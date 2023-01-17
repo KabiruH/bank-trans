@@ -3,11 +3,11 @@ import React from "react";
 function TransactionFormat (props) {
     const mappedTransaction = props.transactions.map((transaction) => {
         return (
-          <tr key={transaction.id}>
-            <td>{transaction.date}</td>
-            <td>{transaction.description}</td>
-            <td>{transaction.category}</td>
-            <td>{transaction.amount}</td>
+          <tr className="table" key={transaction.id}>
+            <td className="rowT">{transaction.date}</td>
+            <td className="rowT">{transaction.description}</td>
+            <td className="rowT">{transaction.category}</td>
+            <td className="rowT">{transaction.amount}</td>
           </tr>
         );
       });

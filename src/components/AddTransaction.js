@@ -12,13 +12,15 @@ function AddTransaction() {
         const newTransaction = { id, date, description, category, amount }
 
         fetch('http://localhost:3000/transactions', {
-            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+              },
             body: JSON.stringify(newTransaction),
         }).then(() => { });
     }
 
     return (
-        <div>
+        <div >
             <form>
                 <div className='inline fields' key={setId}>
                     <input
@@ -50,7 +52,7 @@ function AddTransaction() {
                         onChange={(event) => setAmount(event.target.value)}
                     />
                 </div>
-                <button className='ui button' type='submit' onClick={handleSubmit}>
+                <button className='adbut' type='submit' onClick={handleSubmit}>
                     Add Transaction
                 </button>
             </form>

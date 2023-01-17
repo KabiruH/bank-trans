@@ -36,3 +36,34 @@
     transform: rotate(360deg);
   }
 }
+
+body {
+  background-color: #282c34;
+  color: white;
+  padding: 40px;
+  font-family: Arial;
+  text-align: center;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing:10;
+  text-align: left;
+  margin-bottom: 20px;
+  overflow: hidden;
+  
+}
+
+.rowT {
+  padding-left: 1.8rem;
+  padding-bottom: 0.5rem;
+}
+
+.adbut {
+  background-color: white;
+  color: black;
+  border: 2px solid #0d0646;
+  width: 30%;
+  padding: 10px 24px
+}
