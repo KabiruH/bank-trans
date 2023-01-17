@@ -14,7 +14,7 @@ function AddTransaction() {
         fetch('http://localhost:3000/transactions', {
             headers: {
                 'Content-Type': 'application/json',
-              },
+            },
             body: JSON.stringify(newTransaction),
         }).then(() => { });
     }
@@ -22,14 +22,15 @@ function AddTransaction() {
     return (
         <div >
             <form>
-                <div className='inline fields' key={setId}>
+                <div className="formId" key={setId}>
                     <input
+                        className="textinput"
                         type='date'
-                        name='date'
                         value={date}
-                        onChange={(event) => setDate(event.target.value)}
+                        onChange={(e) => setDate(e.target.value)}
                     />
                     <input
+                        className="textinput"
                         type='text'
                         name='description'
                         placeholder='Description'
@@ -37,6 +38,7 @@ function AddTransaction() {
                         onChange={(event) => setDescription(event.target.value)}
                     />
                     <input
+                        className="textinput"
                         type='text'
                         name='category'
                         placeholder='Category'
@@ -44,6 +46,7 @@ function AddTransaction() {
                         onChange={(event) => setCategory(event.target.value)}
                     />
                     <input
+                        className="textinput"
                         type='number'
                         name='amount'
                         placeholder='Amount'

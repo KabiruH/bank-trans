@@ -67,3 +67,13 @@ body {
   width: 30%;
   padding: 10px 24px
 }
+
+.formId {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+
+}
+
+.textinput {
+  padding-top: 0.5rem;
+}
