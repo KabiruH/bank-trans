@@ -2,14 +2,15 @@
 import './App.css';
 
 import React, { useState, useEffect } from 'react';
-import Filter from './Filter';
-import TransactionsList from "./list"
-import AddTransaction from './AddTransaction';
+import Filter from '../Filter';
+import TransactionsList from "../list"
+import AddTransaction from '../AddTransaction';
 
 function App() {
 
   const [search, setSearch] = useState("")
   const [transactions, setTransactions] = useState([]);
+  
   useEffect(() => {
     fetch("http://localhost:3000/transactions?q=" + search)
       .then((response) => response.json())
