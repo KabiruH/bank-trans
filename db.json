@@ -115,6 +115,27 @@
     },
     {
       "id": 20
+    },
+    {
+      "date": "2023-01-19",
+      "description": "bjk",
+      "category": "jhbk",
+      "amount": "80000",
+      "id": 21
+    },
+    {
+      "date": "2023-01-11",
+      "description": "",
+      "category": "",
+      "amount": "",
+      "id": 22
+    },
+    {
+      "date": "2023-01-19",
+      "description": "hvhgv",
+      "category": "fc",
+      "amount": "50000",
+      "id": 23
     }
   ]
 }

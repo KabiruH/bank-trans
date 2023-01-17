@@ -1,21 +1,22 @@
 import React from "react";
 
+const BarStyle = { width: "20rem", background: "#D0E0D0", border: "none", padding: "0.5rem" }
 
-function Filter ({newSearch}) {
-    const BarStyle = {width:"20rem",background:"#D0E0D0", border:"none", padding:"0.5rem"}
-       return (
+function Filter({ handleSearch }) {
+
+
+    return (
         <div className="search">
-            <input 
-            style={BarStyle}
-            type="text" 
-            placeholder="Search transactions"
-            onChange={newSearch}
+            <input
+                style={BarStyle}
+                type="text"
+                placeholder="Search transactions"
+                onChange={handleSearch}
             />
-            <button onClick={newSearch}>Search</button>
-
-
         </div>
     )
 }
+
+
 
 export default Filter;

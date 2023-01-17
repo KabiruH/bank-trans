@@ -14,7 +14,9 @@ https://bank-trans.vercel.app/
 To run the code npm install -g json-server
 Running the tests
 
-Lets begin by running this command on a different terminal, in the same folder to get the backend started: json-server --watch db.json
+Lets begin by running this command on a different terminal, in the same folder to get the backend started: 
+
+json-server --watch db.json
 
 Test your server by visiting this route in the browser: http://localhost:3000/transactions
 

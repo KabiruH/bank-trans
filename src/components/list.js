@@ -20,6 +20,7 @@ function TransactionsList({ transactions }) {
                     </th>
                 </tr>
                 <TransactionFormat transactions={transactions} />
+               
             </tbody>
         </table>
     );

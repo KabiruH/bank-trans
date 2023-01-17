@@ -1,20 +1,31 @@
 // import logo from './logo.svg';
 import './App.css';
-import AccountDetails from './Account';
+
+import React, { useState, useEffect } from 'react';
+import Filter from './Filter';
+import TransactionsList from "./list"
+import AddTransaction from './AddTransaction';
 
 function App() {
- 
-  function handleOnSearch(search, setTransactions) {
-    setTransactions((transactions) => {
-      transactions.filter((transaction) =>
-        transaction.description.includes(search)
-      );
-    });
+
+  const [search, setSearch] = useState("")
+  const [transactions, setTransactions] = useState([]);
+  useEffect(() => {
+    fetch("http://localhost:3000/transactions?q=" + search)
+      .then((response) => response.json())
+      .then((transactions) => setTransactions(transactions))
+  }, [search])
+
+  function handleSearch(e) {
+    setSearch(e.target.value)
   }
+
   return (
     <div>
       <h1>Bank of FlatIron</h1>
-      <AccountDetails handleSearch={handleOnSearch}/>
+      <Filter handleSearch={handleSearch} />
+      <AddTransaction />
+      <TransactionsList transactions={transactions} />
     </div>
   );
 }

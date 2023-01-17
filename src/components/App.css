@@ -43,7 +43,9 @@ body {
   padding: 40px;
   font-family: Arial;
   text-align: center;
+  font-size: 18px;
 }
+ 
 
 .table {
   width: 100%;
@@ -52,6 +54,9 @@ body {
   text-align: left;
   margin-bottom: 20px;
   overflow: hidden;
+  align-content: center;
+  border: 1px solid;
+  
   
 }
 

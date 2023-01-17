@@ -1,28 +1,38 @@
 import React from "react";
 import { useState } from "react";
 
+
 function AddTransaction() {
     const [date, setDate] = useState('');
     const [description, setDescription] = useState('');
     const [category, setCategory] = useState('');
     const [amount, setAmount] = useState('');
-    const [id, setId] = useState('')
+    
 
-    const handleSubmit = () => {
-        const newTransaction = { id, date, description, category, amount }
+    function handleSubmit(e) {
+        
 
         fetch('http://localhost:3000/transactions', {
+            method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify(newTransaction),
-        }).then(() => { });
+            body: JSON.stringify ({
+                date: date,
+                description: description,
+                category: category,
+                amount: amount,
+              
+            })
+            
+        })
+        alert ("Added transaction")
     }
 
     return (
-        <div >
-            <form>
-                <div className="formId" key={setId}>
+        <div>
+            <form onSubmit={handleSubmit}>
+                <div className="formId">  
                     <input
                         className="textinput"
                         type='date'
@@ -55,7 +65,7 @@ function AddTransaction() {
                         onChange={(event) => setAmount(event.target.value)}
                     />
                 </div>
-                <button className='adbut' type='submit' onClick={handleSubmit}>
+                <button className='adbut' type='submit'>
                     Add Transaction
                 </button>
             </form>
