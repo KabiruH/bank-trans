@@ -7,6 +7,9 @@ This is a react application that displays the current records that have been acc
 # Getting Started
 To view this records, you need to install json server and have NPM installed.
 
+The link is deployed in
+https://bank-trans.vercel.app/
+
 
 To run the code npm install -g json-server
 Running the tests
