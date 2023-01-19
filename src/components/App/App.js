@@ -12,7 +12,7 @@ function App() {
   const [transactions, setTransactions] = useState([]);
   
   useEffect(() => {
-    fetch("http://localhost:3000/transactions?q=" + search)
+    fetch("https://json-server-azure.vercel.app/transactions?q=" + search)
       .then((response) => response.json())
       .then((transactions) => setTransactions(transactions))
   }, [search])

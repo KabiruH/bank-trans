@@ -12,7 +12,7 @@ function AddTransaction() {
     function handleSubmit(e) {
         
 
-        fetch('http://localhost:3000/transactions', {
+        fetch('https://json-server-azure.vercel.app/transactions', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
